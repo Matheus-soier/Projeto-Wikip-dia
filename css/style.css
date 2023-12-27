@@ -118,6 +118,7 @@ main {
     justify-content: center;
     width: 100vw;
     height: min-content;
+    padding: 0 20px;
 }
 
 .container-main {
@@ -131,15 +132,15 @@ main {
     width: 100%;
     height: min-content;
     padding: 10px 0 0 0;
-    border-bottom: 2px solid #B8BABD;
+    border-bottom: 1px solid #B8BABD;
 }
 
 .menu-main-top a {
     font-size: 14px;
     text-decoration: none;
     color: #3366D3;
-    padding-bottom: 10px;
     border-bottom: 2px solid transparent;
+    padding-bottom: 10px;
 }
 
 .menu-main-top .active {
@@ -148,7 +149,23 @@ main {
 }
 
 .menu-main-top a:hover {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #3366D3;
+}
+
+.container-menu-main-top-right {
+    display: flex;
+    gap: 10px;
+}
+
+#ferramentasButton {
+    display: flex;
+    align-items: center;
+    border: 0;
+    background-color: transparent;
+    font-size: 14px;
+    cursor: pointer;
+    padding-bottom: 10px;
+    border-bottom: 2px solid transparent;
 }
 
 .menu-main-top-left,
@@ -156,3 +173,100 @@ main {
     display: flex;
     gap: 10px;
 }
+
+.menu-main-top-right a{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container-popup-ferramentas {
+    width: 100%;
+    justify-content: end;
+}
+
+.displayNone {
+    display: none;
+}
+
+.displayFlex {
+    display: flex;
+}
+
+.popup-ferramentas {
+    position: absolute;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: max-content;
+    height: 500px;
+    overflow-y: scroll;
+    z-index: 99;
+    box-shadow: 0px 0px 10px #0000001d;
+}
+
+.popup-ferramentas h3 {
+    font-size: 14px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #EAECF0;
+}
+
+.popup-ferramentas ul {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    list-style: none;
+    font-size: 14px;
+}
+
+.popup-ferramentas .line {
+    color: #545962;
+    padding: 5px 0;
+    border-bottom: 1px solid #EAECF0;
+}
+
+.popup-ferramentas ul a {
+    text-decoration: none;
+    color: #3366D3;
+}
+
+.popup-ferramentas ul a:hover {
+    text-decoration: underline;
+}
+
+.container-boas-vindas {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    border-bottom: 1px solid #E9E9E9;
+    border-right: 1px solid #E9E9E9;
+    margin-top: 20px;
+    box-shadow: 3px 3px 10px #0000000a;
+}
+
+.boas-vindas-left,
+.boas-vindas-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.boas-vindas-left {
+    width: 60%;
+    height: 120px;
+    border-right: 1px solid #E9E9E9;
+}
+
+.boas-vindas-right {
+    width: 40%;
+}
+
+.boas-vindas-left h3, .boas-vindas-left h2 {
+    color: #555555;
+    
+}
+
