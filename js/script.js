@@ -1,6 +1,7 @@
 const qs = el => document.querySelector(el);
 
-let btnFerramentas = qs('#ferramentasButton').addEventListener('click', ()=> {
+let btnFerramentas = qs('#ferramentasButton').addEventListener('mouseup', (e)=>{
+    e.preventDefault();
     let ferramentasArea = qs('.container-popup-ferramentas');
     let arrowFerramentas = qs('#arrowFerramentas');
 
@@ -16,6 +17,19 @@ let btnFerramentas = qs('#ferramentasButton').addEventListener('click', ()=> {
     } else if (ferramentasArea.classList.contains('displayFlex')) {
         ferramentasArea.classList.remove('displayFlex');
         ferramentasArea.classList.add('displayNone');
+    }
+});
+
+let btnExpandWindown = qs('.fixed-expand-windown').addEventListener('mousedown', (e)=>{
+    e.preventDefault();
+    let main = qs('.container-main');
+    //pegar estilos do css externo
+    let mainStyle = window.getComputedStyle(main); 
+
+    if(mainStyle.width === "950px") {
+        main.style.width = "90vw";
+    } else if(main.style.width === "90vw") {
+        main.style.width = "950px";
     }
 });
 

@@ -23,7 +23,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1400px;
+    max-width: 1400px;
+    width: 90vw;
     height: min-content;
     padding: 10px;
 }
@@ -119,6 +120,23 @@ main {
     width: 100vw;
     height: min-content;
     padding: 0 20px;
+}
+
+.fixed-expand-windown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background-color: #f6f5f5;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.fixed-expand-windown:hover {
+    background-color: #ffffff;
 }
 
 .container-main {
@@ -240,15 +258,25 @@ main {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 150px;
+    height: 130px;
     border-bottom: 1px solid #E9E9E9;
     border-right: 1px solid #E9E9E9;
     margin-top: 20px;
-    box-shadow: 3px 3px 10px #0000000a;
+    box-shadow: 2px 2px 5px #0000000a;
+}
+
+.container-boas-vindas span {
+    color: #3366D3;
+}
+
+.container-boas-vindas span:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .boas-vindas-left,
-.boas-vindas-right {
+.boas-vindas-right,
+.container-text-right {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -262,11 +290,144 @@ main {
 }
 
 .boas-vindas-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     width: 40%;
 }
 
 .boas-vindas-left h3, .boas-vindas-left h2 {
     color: #555555;
-    
 }
 
+.boas-vindas-left h2 {
+    font-size: 33px;
+    font-weight: lighter;
+    text-transform: capitalize;
+}
+
+.boas-vindas-left h3 {
+    font-size: 18px;
+}
+
+.boas-vindas-right ul {
+    display: flex;
+    gap: 5px;
+    list-style: none;
+    font-size: 15px;
+    color: #3366D3;
+}
+
+.boas-vindas-right ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.container-materias-gerais {
+    display: flex;
+    margin-top: 10px;
+    box-shadow: 0px 0px 10px #0000000e;
+    padding: 2px;
+    gap: 1px;
+}
+
+.container-materias-gerais .materias {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    height: 30px;
+    font-size: 13px;
+}
+
+.container-materias-gerais .materias p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.line-materia {
+    width: 100%;
+    height: 5px;
+    background-color: #3366D3;
+}
+
+.materia {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arte-line {
+    background-color: #999933;
+}
+
+.arte {
+    background-color: #F9F9F0;
+}
+
+.biografias-line {
+    background-color: #669933;
+}
+
+.biografias {
+    background-color: #F4F9F0;
+}
+
+.ciencias-line {
+    background-color: #339933;
+}
+
+.ciencias {
+    background-color: #F0F9F0;
+}
+
+.filosofia-line {
+    background-color: #339999;
+}
+
+.filosofia {
+    background-color: #F0F9F9;
+}
+
+.geografia-line {
+    background-color: #336699;
+}
+
+.geografia {
+    background-color: #F0F4F9;
+}
+
+.historia-line {
+    background-color: #333399;
+}
+
+.historia {
+    background-color: #F0F0F9;
+}
+
+.matematica-line {
+    background-color: #993399;
+}
+
+.matematica {
+    background-color: #F9F0F9;
+}
+
+.sociedade-line {
+    background-color: #993366;
+}
+
+.sociedade {
+    background-color: #F9F0F4;
+}
+
+.tecnologia-line {
+    background-color: #993333;
+}
+
+.tecnologia {
+    background-color: #F9F0F0;
+}
