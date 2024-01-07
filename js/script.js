@@ -1,24 +1,38 @@
 const qs = el => document.querySelector(el);
 
-let btnFerramentas = qs('#ferramentasButton').addEventListener('mouseup', (e)=>{
+let btnFerramentas = qs('#ferramentasButton');
+let ferramentasArea = qs('.container-popup-ferramentas');
+let arrowFerramentas = qs('#arrowFerramentas');
+
+btnFerramentas.addEventListener('mouseup', (e) => {
     e.preventDefault();
-    let ferramentasArea = qs('.container-popup-ferramentas');
-    let arrowFerramentas = qs('#arrowFerramentas');
+    toggleFerramentas();
+});
 
-     if(arrowFerramentas.getAttribute('name') == 'chevron-down') {
-         arrowFerramentas.setAttribute('name', 'chevron-up');
-     } else if (arrowFerramentas.getAttribute('name') == 'chevron-up') {
-        arrowFerramentas.setAttribute('name', 'chevron-down');
-     }
-
-     if (ferramentasArea.classList.contains('displayNone')) {
-        ferramentasArea.classList.remove('displayNone');
-        ferramentasArea.classList.add('displayFlex');
-    } else if (ferramentasArea.classList.contains('displayFlex')) {
-        ferramentasArea.classList.remove('displayFlex');
-        ferramentasArea.classList.add('displayNone');
+document.addEventListener('mouseup', (e) => {
+    if (!ferramentasArea.contains(e.target) && !btnFerramentas.contains(e.target)) {
+        closeFerramentas();
     }
 });
+
+function toggleFerramentas() {
+    let arrowAttr = arrowFerramentas.getAttribute('name');
+    arrowFerramentas.setAttribute('name', arrowAttr == 'chevron-down' ? 'chevron-up' : 'chevron-down');
+    
+    if (ferramentasArea.classList.contains('displayNone')) {
+        ferramentasArea.classList.replace('displayNone', 'displayFlex');
+    } else {
+        ferramentasArea.classList.replace('displayFlex', 'displayNone');
+    }
+}
+
+function closeFerramentas() {
+    if (ferramentasArea.classList.contains('displayFlex')) {
+        ferramentasArea.classList.replace('displayFlex', 'displayNone');
+        arrowFerramentas.setAttribute('name', 'chevron-down');
+    }
+}
+
 
 let btnExpandWindown = qs('.fixed-expand-windown').addEventListener('mousedown', (e)=>{
     e.preventDefault();
