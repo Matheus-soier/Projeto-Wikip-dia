@@ -436,10 +436,12 @@ main {
 .container-artigos {
     display: flex;
     gap: 2px;
+    height: max-content;
 }
 
 .container-artigos-left {
     width: 55%;
+    
 }
 
 .container-artigos-right {
@@ -456,25 +458,34 @@ main {
 .content-artigo {
     margin-top: 2px;
     width: 100%;
-    height: 500px;
-    background-color: #F0F9F0;
+    height: max-content;
     padding: 15px;
-    position: relative;
     font-size: 14px;
 }
 
+.first-section-artigo {
+    background-color: #F0F9F0;
+}
+
+.second-section-artigo {
+    background-color: #F0F0F9;
+}
+
 .content-artigo p,
-.container-artigos-right ul {
+.container-artigos-right ul,
+.content-sobre p {
     line-height: 20px;
 }
 
 .content-artigo p span,
-.container-artigos-right ul li span {
+.container-artigos-right ul li span,
+.content-sobre p span {
     color: #3366CC;
 }
 
 .content-artigo p span:hover,
-.container-artigos-right ul li span:hover {
+.container-artigos-right ul li span:hover,
+.content-sobre p span:hover {
     cursor: pointer;
     text-decoration: underline;
 }
@@ -495,9 +506,77 @@ main {
 }
 
 .container-artigos-right ul {
-    padding: 0 0 0px 20px;
+    padding: 0 0 8px 20px;
+    border-bottom: 1px dotted black;
+}
+
+.container-artigos-right p {
+    padding: 15px 0;
+    border-bottom: 1px dotted black;
 }
 
 .container-artigos-right ul li {
     margin: 0 0 6px 0;
+}
+
+.more-informations {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 40px;
+}
+
+.more-informations p {
+    border: 0;
+    padding: 0;
+}
+
+.footer-artigo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 30px;
+    gap: 25px;
+}
+
+.compartilhamento-artigo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    font-weight: bold;
+    flex: 1;
+}
+
+.compartilhamento-artigo svg:hover {
+    cursor: pointer;
+}
+
+.artigos-destacados {
+    font-weight: bold;
+}
+.sobre-wikipedia {
+    margin-bottom: 50px;
+}
+
+.content-sobre {
+    width: 100%;
+    height: max-content;
+    padding: 25px 15px;
+    font-size: 14px;
+    background-color: #F5F5F5;
+}
+
+.content-sobre img {
+    width: 100px;
+}
+
+.content-sobre p:nth-last-child(1) {
+    margin-top: 15px;
+}
+
+.portal-sobre {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
